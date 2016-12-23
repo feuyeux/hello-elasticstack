@@ -1,0 +1,14 @@
+filebeat:
+  prospectors:
+    - input_type: log
+      paths:
+        - /Users/erichan/vangogh/logs/vanGogh.log
+      exclude_lines: ['^DBG']
+      fields:
+        app_id: van
+      document_type: vangogh
+output:
+  logstash:
+    hosts: ["localhost:5043"]
+  console:
+    pretty: true
