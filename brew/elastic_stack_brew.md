@@ -139,7 +139,6 @@ Or, if you don't want/need a background service you can just run:
 elasticsearch
 ```
 
-
 ### 4 kibana
 
 #### 4.1 install
@@ -163,6 +162,10 @@ Or, if you don't want/need a background service you can just run:
 ```sh
 kibana
 ```
+
+![](snapshot.png)
+
+![](kibana.png)
 
 ### 5 References
 1. [Elasticsearch for Hadoop](https://www.elastic.co/guide/en/elasticsearch/hadoop/current/index.html)
