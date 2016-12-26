@@ -3,11 +3,11 @@
 ### 1 filebeat
 
 #### 1.1 install
-```
+```sh
 brew install/list/upgrade filebeat
 ```
 
-```
+```sh
 To have launchd start filebeat now and restart at login:
   brew services start filebeat
 Or, if you don't want/need a background service you can just run:
@@ -18,7 +18,7 @@ Or, if you don't want/need a background service you can just run:
 
 1. copy vanGogh.sh to ~/vangogh/
 
-```
+```sh
 #!/bin/sh
 #
 # vanGogh script.
@@ -45,7 +45,7 @@ done
 
 2. start vanGogh.sh
 
-```
+```sh
 sh ~/vangogh/vanGogh.sh
 ```
 
@@ -73,13 +73,13 @@ output:
 ```
 
 #### 1.4 start
-```
+```sh
 filebeat -c ~/vangogh/vanGogh.fb.yml
 ```
 
 ### 2 logstash
 #### 2.1 install
-```
+```sh
 brew install/list/upgrade logstash
 ```
 
@@ -87,7 +87,7 @@ brew install/list/upgrade logstash
 
 > ~/vangogh/vanGogh.ls.conf
 
-```yml
+```ruby
 input {
   beats {
     port => "5043"
@@ -108,7 +108,7 @@ output {
 }
 ```
 #### 2.3 test conf
-```
+```shell
 logstash -f ~/vangogh/vanGogh.ls.conf --config.test_and_exit
 ```
 #### 2.4 start
@@ -118,11 +118,11 @@ logstash -f ~/vangogh/vanGogh.ls.conf --config.reload.automatic
 
 ### 3 elasticsearch
 #### 3.1 install
-```
+```sh
 brew install/list/upgrade elasticsearch
 ```
 
-```
+```sh
 Data:    /usr/local/var/elasticsearch/elasticsearch_erichan/
 Logs:    /usr/local/var/log/elasticsearch/elasticsearch_erichan.log
 Plugins: /usr/local/Cellar/elasticsearch/5.1.1/libexec/plugins/
@@ -135,7 +135,7 @@ Or, if you don't want/need a background service you can just run:
   elasticsearch
 ```
 #### 3.2 start
-```
+```sh
 elasticsearch
 ```
 
@@ -143,11 +143,11 @@ elasticsearch
 ### 4 kibana
 
 #### 4.1 install
-```
+```sh
 brew install/list/upgrade kibana
 ```
 
-```
+```sh
 Config: /usr/local/etc/kibana/
 If you wish to preserve your plugins upon upgrade, make a copy of
 /usr/local/opt/kibana/plugins before upgrading, and copy it into the
@@ -160,7 +160,7 @@ Or, if you don't want/need a background service you can just run:
 ```
 
 #### 4.2 start
-```
+```sh
 kibana
 ```
 
