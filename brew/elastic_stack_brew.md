@@ -104,7 +104,7 @@ input {
 filter {
   grok {
     match => { 
-      "message" => "%{WORD:ts}\|%{WORD:app_id}\|%{NUMBER:timestamp}\|%{NUMBER:biz_number}\|%{WORD:msg}%{SPACE}%{WORD:msg}"
+      "message" => "%{WORD:ts}\-%{WORD:ts}\|%{WORD:app_id}\|%{NUMBER:timestamp}\|%{NUMBER:biz_number}\|%{WORD:msg}%{SPACE}%{WORD:msg}"
     }
   }
 }
@@ -172,6 +172,12 @@ kibana
 
 ### 5 screenshot
 #### elastic stack console
+- `sh ~/vangogh/vanGogh.sh`
+- `filebeat -c ~/vangogh/vanGogh.fb.yml`
+- `logstash -f ~/vangogh/vanGogh.ls.conf`
+- `elasticsearch`
+- `kibana`
+
 ![](console_screenshot.png)
 
 #### kibana
