@@ -16,7 +16,7 @@ Or, if you don't want/need a background service you can just run:
 
 #### 1.2 random log script
 
-1. copy vanGogh.sh to ~/vangogh/
+1.copy vanGogh.sh to ~/vangogh/
 
 ```sh
 #!/bin/sh
@@ -43,13 +43,20 @@ do
 done
 ```
 
-2. start vanGogh.sh
+2.start vanGogh.sh
 
 ```sh
 sh ~/vangogh/vanGogh.sh
 ```
 
-3. log located: ~/vangogh/logs/vanGogh.log
+3.log located: ~/vangogh/logs/vanGogh.log
+
+```
+20161226-1419|13231|1482733189|5|hello Sam!
+20161226-1419|23527|1482733190|0|hello Vincent!
+20161226-1419|15542|1482733191|4|hello Kevin!
+...
+```
 
 #### 1.3 filebeat config
 
@@ -163,11 +170,14 @@ Or, if you don't want/need a background service you can just run:
 kibana
 ```
 
-![](snapshot.png)
+### 5 screenshot
+#### elastic stack console
+![](console_screenshot.png)
 
-![](kibana.png)
+#### kibana
+![](kibana_screenshot.png)
 
-### 5 References
+### 6 References
 1. [Elasticsearch for Hadoop](https://www.elastic.co/guide/en/elasticsearch/hadoop/current/index.html)
 2. [Elasticsearch指南](https://www.elastic.co/guide/en/elasticsearch/guide/current/index.html)
 3. [Elasticsearch文档](https://www.elastic.co/guide/en/elasticsearch/reference/current/index.html)
