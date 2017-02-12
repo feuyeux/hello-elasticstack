@@ -1,6 +1,6 @@
 #!/bin/bash
-ES_CONF=${ES_HOME}/config2/elasticsearch.yml
-KB_CONF=${KIBANA_HOME}/config2/kibana.yml
+ES_CONF=/config/elasticsearch.yml
+KB_CONF=/config/kibana.yml
 
 if [ ! -n "${NODE_NAME}" ]; then
   echo "ERROR: NODE_NAME, NODE_IP, CLUSTER_IPS cannot be null"
