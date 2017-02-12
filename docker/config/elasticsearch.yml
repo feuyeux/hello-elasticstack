@@ -1,16 +1,32 @@
 cluster:
   name: CLUSTER_NAME
+
 path:
   data: /data
   logs: /home/admin/logs  
+
 node:
   name: NODE_NAME
 network:
   host: NODE_IP
+
 discovery:
-  zen.ping.unicast.hosts: [CLUSTER_IPS]
-  zen.minimum_master_nodes: ZEN_NUM
+  zen: 
+    ping.unicast.hosts: [CLUSTER_IPS]
+    minimum_master_nodes: ZEN_NUM
+
 indices: 
   requests.cache.size: 2%
+  memory:
+    index_buffer_size: 20%
+    min_index_buffer_size: 512mb
+
+thread_pool:
+    index:
+        size: 5
+        queue_size: 1000    
 index:
   store.type: niofs
+
+bootstrap.memory_lock: true  
+xpack.security.enabled: false
