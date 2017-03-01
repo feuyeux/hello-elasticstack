@@ -33,8 +33,9 @@ index:
   store.type: niofs
 
 #bootstrap.memory_lock: true
-xpack.monitoring.enabled: true
-xpack.watcher.enabled: false
-xpack.security.enabled: false
-xpack.graph.enabled: false
-xpack.reporting.enabled: false
+
+xpack:
+  monitoring.enabled: true
+  watcher.enabled: false
+  security.enabled: false
+  graph.enabled: false
