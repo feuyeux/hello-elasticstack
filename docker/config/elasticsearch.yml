@@ -1,5 +1,6 @@
 cluster:
   name: CLUSTER_NAME
+  routing.allocation.cluster_concurrent_rebalance: 2
 
 path:
   data: /data
@@ -22,11 +23,18 @@ indices:
     min_index_buffer_size: 512mb
 
 thread_pool:
-    index:
-        size: 5
-        queue_size: 1000    
+  index:
+    size: 5
+    queue_size: 1000
+  bulk:
+    queue_size: 3000
+
 index:
   store.type: niofs
 
-bootstrap.memory_lock: true  
+#bootstrap.memory_lock: true
+xpack.monitoring.enabled: true
+xpack.watcher.enabled: false
 xpack.security.enabled: false
+xpack.graph.enabled: false
+xpack.reporting.enabled: false

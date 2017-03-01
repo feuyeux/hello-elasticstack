@@ -2,4 +2,8 @@ server.host: NODE_IP
 server.name: NODE_NAME
 elasticsearch.url: http://NODE_IP:9200
 kibana.index: .kibana
+xpack.monitoring.enabled: true
+xpack.watcher.enabled: false
 xpack.security.enabled: false
+xpack.graph.enabled: false
+xpack.reporting.enabled: false

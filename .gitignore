@@ -1,4 +1,4 @@
-okie_dokie/*.zip
-okie_dokie/es_plugins/*.zip
-okie_dokie/*.tar.gz
+docker/okie_dokie/*.zip
+docker/okie_dokie/es_plugins/*.zip
+docker/okie_dokie/*.tar.gz
 .DS_Store

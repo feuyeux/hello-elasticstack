@@ -1,8 +1,8 @@
 FROM feuyeux/java8-nodejs7-alpine
 MAINTAINER Eric Han <feuyeux.gmail.com>
 
-ENV STACK_VERSION=5.2.0 PLUGIN_VERSION=5.2.0 HOME=/home/admin
-ENV ES_HOME=${HOME}/elasticsearch-${STACK_VERSION} KIBANA_HOME=${HOME}/kibana-${STACK_VERSION}-linux-x86_64 ES_TAR=elasticsearch-${STACK_VERSION}.tar.gz KB_TAR=kibana-${STACK_VERSION}-linux-x86_64.tar.gz REFRESHED_AT=2017-02-13
+ENV STACK_VERSION=5.2.2 PLUGIN_VERSION=5.2.2 HOME=/home/admin
+ENV ES_HOME=${HOME}/elasticsearch-${STACK_VERSION} KIBANA_HOME=${HOME}/kibana-${STACK_VERSION}-linux-x86_64 ES_TAR=elasticsearch-${STACK_VERSION}.tar.gz KB_TAR=kibana-${STACK_VERSION}-linux-x86_64.tar.gz REFRESHED_AT=2017-03-01
 
 RUN adduser -D -h /bin/sh admin
 WORKDIR ${HOME}
