@@ -2,7 +2,7 @@ FROM feuyeux/java8-nodejs7-alpine
 MAINTAINER Eric Han <feuyeux.gmail.com>
 
 ENV STACK_VERSION=5.2.2 PLUGIN_VERSION=5.2.2 HOME=/home/admin
-ENV ES_HOME=${HOME}/elasticsearch-${STACK_VERSION} KIBANA_HOME=${HOME}/kibana-${STACK_VERSION}-linux-x86_64 ES_TAR=elasticsearch-${STACK_VERSION}.tar.gz KB_TAR=kibana-${STACK_VERSION}-linux-x86_64.tar.gz REFRESHED_AT=2017-03-01
+ENV ES_HOME=${HOME}/elasticsearch-${STACK_VERSION} KIBANA_HOME=${HOME}/kibana-${STACK_VERSION}-linux-x86_64 ES_TAR=elasticsearch-${STACK_VERSION}.tar.gz KB_TAR=kibana-${STACK_VERSION}-linux-x86_64.tar.gz REFRESHED_AT=2017-03-19
 
 RUN adduser -D -h /bin/sh admin
 WORKDIR ${HOME}
@@ -19,8 +19,8 @@ RUN tar -zxf ${ES_TAR} && tar -zxf ${KB_TAR} &&  \
     ln -s $(which node) ${KIBANA_HOME}/node/bin/node && ln -s $(which npm) ${KIBANA_HOME}/node/bin/npm && \
 
 ## install xpack plugin
-    ${ES_HOME}/bin/elasticsearch-plugin install file://${HOME}/x-pack-${STACK_VERSION}_es.zip && \
-    ${KIBANA_HOME}/bin/kibana-plugin install file://${HOME}/x-pack-${STACK_VERSION}_kb.zip && \
+    ${ES_HOME}/bin/elasticsearch-plugin install file://${HOME}/x-pack-${STACK_VERSION}.zip && \
+    ${KIBANA_HOME}/bin/kibana-plugin install file://${HOME}/x-pack-${STACK_VERSION}.zip && \
 
 ## clean
     rm -rf ${ES_TAR} && rm -rf ${KB_TAR} && rm -rf *.zip
