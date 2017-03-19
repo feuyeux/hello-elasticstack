@@ -28,7 +28,8 @@ RUN tar -zxf ${ES_TAR} && tar -zxf ${KB_TAR} &&  \
 COPY boostrap/*.sh ${HOME}/
 
 ## config for pam_limits.so(Pluggable Authentication Modules) in linux-pam
-RUN mkdir /etc/security/ /etc/pam.d/ && touch /etc/security/limits.conf && touch /etc/pam.d/login && \
+#RUN mkdir /etc/security/ /etc/pam.d/
+RUN touch /etc/security/limits.conf && touch /etc/pam.d/login && \
     echo "admin soft memlock unlimited" > /etc/security/limits.conf && \
     echo "admin hard memlock unlimited" >> /etc/security/limits.conf && \
     echo "session required pam_limits.so" > /etc/pam.d/login && \
